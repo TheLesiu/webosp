@@ -1,0 +1,244 @@
+/* Resetowanie stylów domyślnych */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(216, 200, 184, 0.818);
+}
+
+/* Stylowanie headera */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #e35a0a;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  max-height: 90px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+#logo-osp {
+  flex: 1;
+  max-width: 85px; /* maksymalna szerokość logotypu */
+}
+
+h1, h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Stylizacja nawigacji */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #666;
+  background-color: #c86228;
+}
+
+/* Stylowanie sekcji "O nas" */
+.about-container {
+  padding: 50px;
+}
+
+.about-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Stylowanie sekcji "Zarząd OSP" */
+.management-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+
+.management-item {
+  margin: 30px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.management-item img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.management-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.management-item p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Stylowanie sekcji "Co robimy?" */
+.service-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+  height: 200px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  color: #333;
+}
+
+.service-item.service-med {
+  background-image: url("web-image/med.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.service-item.service-training {
+  background-image: url("web-image/training.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.service-item.service-big {
+  background-image: url("web-image/big.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.service-item.service-small {
+  background-image: url("web-image/small.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.service-item.service-big, .service-item.service-med,
+.service-item.service-small, .service-item.service-training, a {
+  text-decoration: none;
+  color: #f8d6d6;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.service-item.service-big, .service-item.service-med,
+.service-item.service-small, .service-item.service-training, a:hover {
+  background-color: #c9c9c9;
+  border-radius: 5%;
+}
+
+/* Stylowanie sekcji "Galeria" */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Stylizowanie sekcji kontatu*/
+.contact-item {
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.contact-item i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+/*Stylizowanie stopki storny*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #c86228;
+  color: #fff;
+  font-size: 16px;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+@media screen and (max-width: 667px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
+
+  .service-item {
+    flex-basis: 50%;
+  }
+}

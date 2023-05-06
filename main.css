@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: rgba(216, 200, 184, 0.818);
+  background-image: linear-gradient(to bottom, rgb(227, 90, 10), rgba(170, 91, 1, 0.2));
+  background-size: cover;
 }
 
 /* Stylowanie headera */
@@ -15,22 +16,20 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
-  background-color: #e35a0a;
+  background-color: rgb(227, 90, 10);
   position: sticky;
   top: 0;
   z-index: 999;
   max-height: 90px;
 }
 
-section {
-  margin-bottom: 50px;
-}
-
+/*Stylizacja loga w nagłówku*/
 #logo-osp {
   flex: 1;
   max-width: 85px; /* maksymalna szerokość logotypu */
 }
 
+/* Stylizacja znaczników "h1" i "h2"*/
 h1, h2{
   text-align: center;
   margin-bottom: 10px;
@@ -65,6 +64,7 @@ nav a:hover {
 /* Stylowanie sekcji "O nas" */
 .about-container {
   padding: 50px;
+  margin-bottom: 50px;
 }
 
 .about-container h1 {
@@ -84,6 +84,7 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px;
+  margin-bottom: 50px;
 }
 
 .management-item {
@@ -117,6 +118,7 @@ nav a:hover {
   justify-content: center;
   padding: 50px;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .service-item {
@@ -132,7 +134,6 @@ nav a:hover {
   font-size: 24px;
   font-weight: bold;
   text-shadow: black 0.1em 0.1em 0.2em;
-  color: #333;
 }
 
 .service-item.service-med {
@@ -182,6 +183,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .gallery-item {
@@ -194,13 +196,14 @@ nav a:hover {
   object-fit: cover;
 }
 
+/*Stylizowanie sekcji kontatu*/
 .contact-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
-/*Stylizowanie sekcji kontatu*/
 .contact-item {
   margin: 15px;
   display: flex;
@@ -219,26 +222,81 @@ footer {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: #c86228;
+  background-color: rgba(212, 74, 0, 0.6);
   color: #fff;
   font-size: 16px;
+  text-align: center;
 }
 
 footer p {
   margin: 0;
 }
 
-
+/*Media queries dla urządzeń o mniejszej szerokości ekranu niż 667 pikseli*/
 @media screen and (max-width: 667px) {
-  nav ul {
-    flex-direction: column;
-  }
-
+  /* Zmniejszenie marginesów w liście nawigacyjnej */
   nav li {
-    margin: 5px 0;
+    margin: 5px;
   }
 
+  /* Zmniejszenie czcionki w nawigacji */
+  nav a {
+    font-size: 16px;
+  }
+
+  /* Zmniejszenie marginesu w sekcji "O nas" */
+  .about-container {
+    padding: 30px;
+  }
+
+  /* Zmniejszenie czcionki w sekcji "O nas" */
+  .about-container h1 {
+    font-size: 30px;
+  }
+
+  /* Zmniejszenie marginesów w sekcji "Zarząd OSP" */
+  .management-item {
+    margin: 20px;
+  }
+
+  /* Zmniejszenie czcionki w sekcji "Zarząd OSP" */
+  .management-item h3 {
+    font-size: 20px;
+  }
+
+  /* Zmniejszenie marginesów w sekcji "Co robimy?" */
+  .service-container {
+    padding: 30px;
+  }
+
+  /* Zmniejszenie wysokości elementów w sekcji "Co robimy?" i ustawienie długości */
   .service-item {
+    height: 150px;
     flex-basis: 50%;
+  }
+
+  /* Zmniejszenie czcionki w sekcji "Co robimy?" */
+  .service-item {
+    font-size: 18px;
+  }
+
+  /* Zmniejszenie marginesów w sekcji "Galeria" */
+  .gallery-item {
+    margin: 5px;
+  }
+
+  /* Zmniejszenie wysokości zdjęć w sekcji "Galeria" */
+  .gallery-item img {
+    height: 150px;
+  }
+
+  /* Zmniejszenie marginesów w sekcji "Kontakt" */
+  .contact-item {
+    margin: 10px;
+  }
+
+  /* Zmniejszenie czcionki w stopce strony */
+  footer p {
+    font-size: 14px;
   }
 }

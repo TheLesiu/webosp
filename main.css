@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+/* Ustawienie podstawowych parametrów strony */
 body {
-  background-image: linear-gradient(to bottom, rgb(227, 90, 10), rgba(170, 91, 1, 0.2));
+  background-image: linear-gradient(to bottom, rgb(227, 88, 11), rgba(170, 91, 1, 0.2));
   background-size: cover;
 }
 
@@ -23,16 +24,10 @@ header {
   max-height: 90px;
 }
 
-/*Stylizacja loga w nagłówku*/
+/* Stylizacja loga w nagłówku */
 #logo-osp {
   flex: 1;
-  max-width: 85px; /* maksymalna szerokość logotypu */
-}
-
-/* Stylizacja znaczników "h1" i "h2"*/
-h1, h2{
-  text-align: center;
-  margin-bottom: 10px;
+  max-width: 85px;
 }
 
 /* Stylizacja nawigacji */
@@ -61,14 +56,19 @@ nav a:hover {
   background-color: #c86228;
 }
 
+/* Stylizacja znaczników "h1" i "h2"*/
+h1, h2{
+  text-align: center;
+  margin: 30px;
+}
+
 /* Stylowanie sekcji "O nas" */
 .about-container {
-  padding: 50px;
+  padding: 90px;
   margin-bottom: 50px;
 }
 
 .about-container h1 {
-  font-size: 40px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -83,7 +83,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px;
+  padding: 0px;
   margin-bottom: 50px;
 }
 
@@ -102,9 +102,9 @@ nav a:hover {
 }
 
 .management-item h3 {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .management-item p {
@@ -116,9 +116,9 @@ nav a:hover {
 .service-container {
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: 0px;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .service-item {
@@ -130,21 +130,17 @@ nav a:hover {
   background-color: #f7f7f7;
   border-radius: 10px;
   margin: 20px;
-  text-align: center;
-  font-size: 24px;
+}
+
+.service-item p {
+  font-size: 1.2em;
   font-weight: bold;
   text-shadow: black 0.1em 0.1em 0.2em;
+  text-align: center;
 }
 
 .service-item.service-med {
   background-image: url("web-image/med.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-.service-item.service-training {
-  background-image: url("web-image/training.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -165,7 +161,7 @@ nav a:hover {
 }
 
 .service-item.service-big, .service-item.service-med,
-.service-item.service-small, .service-item.service-training, a {
+.service-item.service-small, a {
   text-decoration: none;
   color: #f8d6d6;
   transition: all 0.3s ease;
@@ -173,8 +169,8 @@ nav a:hover {
 }
 
 .service-item.service-big, .service-item.service-med,
-.service-item.service-small, .service-item.service-training, a:hover {
-  background-color: #c9c9c9;
+.service-item.service-small, a:hover {
+  background-color: #a27c49;
   border-radius: 5%;
 }
 
@@ -183,25 +179,27 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+  align-items: center;
+  margin-bottom: 90px;
 }
 
 .gallery-item {
-  margin: 10px;
+  max-width: 300px;
+  margin-bottom: 20px;
 }
 
 .gallery-item img {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-/*Stylizowanie sekcji kontatu*/
+/* Stylizowanie sekcji kontatu */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .contact-item {
@@ -216,14 +214,48 @@ nav a:hover {
   margin-right: 5px;
 }
 
+.contact-item a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.contact-item a:hover {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  background-color: rgba(225, 161, 127, 0.6);
+}
+
+/* Stylizowanie sekcji "Sponsor" */
+.sponsor-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.sponsor-item {
+  margin: 10px;
+}
+
+.sponsor-item img {
+  max-width: 300px;
+  max-height: 200px;
+  image-rendering: auto;
+  object-fit: cover;
+  margin: 10px;
+}
+
 /*Stylizowanie stopki storny*/
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: rgba(212, 74, 0, 0.6);
-  color: #fff;
+  background-color: rgba(221, 193, 178, 0.6);
+  color: #000;
   font-size: 16px;
   text-align: center;
 }
@@ -298,5 +330,143 @@ footer p {
   /* Zmniejszenie czcionki w stopce strony */
   footer p {
     font-size: 14px;
+  }
+}
+
+/* Media queries dla urządzeń o szerokości ekranu między 668px a 1024px */
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+/* Zwiększenie marginesów w liście nawigacyjnej */
+nav li {
+  margin: 10px;
+  }
+  
+  /* Zwiększenie czcionki w nawigacji */
+  nav a {
+  font-size: 18px;
+  }
+  
+  /* Zwiększenie marginesu w sekcji "O nas" */
+  .about-container {
+  padding: 50px;
+  }
+  
+  /* Zwiększenie czcionki w sekcji "O nas" */
+  .about-container h1 {
+  font-size: 36px;
+  }
+  
+  /* Zwiększenie marginesów w sekcji "Zarząd OSP" */
+  .management-item {
+  margin: 30px;
+  }
+  
+  /* Zwiększenie czcionki w sekcji "Zarząd OSP" */
+  .management-item h3 {
+  font-size: 24px;
+  }
+  
+  /* Zwiększenie marginesów w sekcji "Co robimy?" */
+  .service-container {
+  padding: 50px;
+  }
+  
+  /* Zwiększenie wysokości elementów w sekcji "Co robimy?" i ustawienie długości */
+  .service-item {
+  height: 200px;
+  flex-basis: 33.33%;
+  }
+  
+  /* Zwiększenie czcionki w sekcji "Co robimy?" */
+  .service-item {
+  font-size: 22px;
+  }
+  
+  /* Zwiększenie marginesów w sekcji "Galeria" */
+  .gallery-item {
+  margin: 10px;
+  }
+  
+  /* Zwiększenie wysokości zdjęć w sekcji "Galeria" */
+  .gallery-item img {
+  height: 200px;
+  }
+  
+  /* Zwiększenie marginesów w sekcji "Kontakt" */
+  .contact-item {
+  margin: 20px;
+  }
+  
+  /* Zwiększenie czcionki w stopce strony */
+  footer p {
+  font-size: 16px;
+  }
+}
+
+/* Media queries dla urządzeń o szerszej szerokości ekranu niż 1024 pikseli */
+@media screen and (min-width: 1025px) {
+  /* Powiększenie marginesów w liście nawigacyjnej */
+  nav li {
+    margin: 15px;
+  }
+
+  /* Powiększenie czcionki w nawigacji */
+  nav a {
+    font-size: 20px;
+  }
+
+  /* Powiększenie marginesu w sekcji "O nas" */
+  .about-container {
+    padding: 50px;
+  }
+
+  /* Powiększenie czcionki w sekcji "O nas" */
+  .about-container h1 {
+    font-size: 40px;
+  }
+
+  /* Powiększenie marginesów w sekcji "Zarząd OSP" */
+  .management-item {
+    margin: 30px;
+  }
+
+  /* Powiększenie czcionki w sekcji "Zarząd OSP" */
+  .management-item h3 {
+    font-size: 24px;
+  }
+
+  /* Powiększenie marginesów w sekcji "Co robimy?" */
+  .service-container {
+    padding: 0px;
+  }
+
+  /* Powiększenie wysokości elementów w sekcji "Co robimy?" i ustawienie długości */
+  .service-item {
+    height: 200px;
+    flex-basis: 33.33%;
+  }
+
+  /* Powiększenie czcionki w sekcji "Co robimy?" */
+  .service-item {
+    font-size: 20px;
+  }
+
+  /* Powiększenie marginesów w sekcji "Galeria" */
+  .gallery-item {
+    margin: 10px;
+  }
+
+  /* Powiększenie wysokości zdjęć w sekcji "Galeria" */
+  .gallery-item img {
+    height: 200px;
+  }
+
+  /* Powiększenie marginesów w sekcji "Kontakt" */
+  .contact-item {
+    margin: 20px;
+  }
+
+  /* Powiększenie czcionki w stopce strony */
+  footer p {
+    font-size: 16px;
   }
 }
